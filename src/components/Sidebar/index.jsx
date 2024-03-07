@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import { connect } from 'react-redux';
 import $ from 'jquery';
-import { ThemeProvider } from '@material-ui/styles';
-//* @material-ui core
-import Drawer from '@material-ui/core/Drawer';
-import IconButton from '@material-ui/core/IconButton';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { green } from '@material-ui/core/colors';
-//* @material-ui icons
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { ThemeProvider } from '@mui/material/styles';
+// @mui/material
+import Drawer from '@mui/material/Drawer';
+import IconButton from '@mui/material/IconButton';
+import { createTheme } from '@mui/material/styles';
+import { green } from '@mui/material/colors';
+// @mui/icons-material
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 //* Components
 import Account from './Account';
 import Toolbar from './Toolbar';

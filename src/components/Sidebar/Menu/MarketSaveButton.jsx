@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import { ListItemIcon } from '@material-ui/core';
+// @mui/material
+import { ListItemIcon } from '@mui/material';
 //* Actions
 import { addNewMarket, removeMarket } from '../../../redux/actions/sport';
 

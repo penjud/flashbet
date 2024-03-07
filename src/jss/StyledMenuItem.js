@@ -1,5 +1,5 @@
-import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
+import { withStyles } from '@mui/material/styles';
+import MenuItem from '@mui/material/MenuItem';
 
 export default withStyles((theme) => ({
   root: {

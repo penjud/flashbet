@@ -1,6 +1,6 @@
 import React, { memo, useMemo, useCallback } from 'react';
 import { connect } from 'react-redux';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 //* Actions
 import { removeAllSelectionBackBets } from '../../../../redux/actions/back';
 import { removeAllSelectionLayBets } from '../../../../redux/actions/lay';

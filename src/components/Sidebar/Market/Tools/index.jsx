@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import Checkbox from '@material-ui/core/Checkbox';
-import Collapse from '@material-ui/core/Collapse';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
+// @mui/material
+import Checkbox from '@mui/material/Checkbox';
+import Collapse from '@mui/material/Collapse';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
 //* JSS
 import useStyles from '../../../../jss/components/Sidebar/market/tools';
 import { ToolsTableCell, ToolsTableRow } from '../../../../jss/components/Sidebar/market/tools/toolsTableStyle';

@@ -1,15 +1,14 @@
-require('dotenv').config();
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
+import { App } from './app.js';
 
-const App = require('./app.js');
+const express = import('express');
+const path = import('path');
+const cookieParser = import('cookie-parser');
 
-const BetFairAccountController = require('./controllers/betfair-account');
-const BetFairAuthController = require('./controllers/betfair-auth');
-const BetFairBettingControlling = require('./controllers/betfair-betting');
-const BetFairMenuController = require('./controllers/betfair-menu');
-const TradingToolsController = require('./controllers/trading-tools');
+const BetFairAccountController = import('./controllers/betfair-account');
+const BetFairAuthController = import('./controllers/betfair-auth');
+const BetFairBettingControlling = import('./controllers/betfair-betting');
+const BetFairMenuController = import('./controllers/betfair-menu');
+const TradingToolsController = import('./controllers/trading-tools');
 
 const app = new App({
   port: process.env.NODE_ENV === 'production' ? process.env.PRODUCTION_PORT : process.env.PORT || 3001,
@@ -48,4 +47,4 @@ process.on('SIGUSR2', exitHandler.bind(null, { exit: true }));
 // Catches uncaught exceptions
 process.on('uncaughtException', exitHandler.bind(null, { exit: true }));
 
-module.exports = app;
+export default app;

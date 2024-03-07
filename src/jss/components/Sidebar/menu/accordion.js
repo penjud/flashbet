@@ -1,6 +1,6 @@
-import { withStyles } from '@material-ui/core/styles';
-import MultiAccordion from '@material-ui/core/Accordion';
-import MultiAccordionSummary from '@material-ui/core/AccordionSummary';
+import { withStyles } from '@mui/material/styles';
+import MultiAccordion from '@mui/material/Accordion';
+import MultiAccordionSummary from '@mui/material/AccordionSummary';
 
 export const Accordion = withStyles({
   root: {

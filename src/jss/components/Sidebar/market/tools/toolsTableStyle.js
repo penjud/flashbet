@@ -1,6 +1,6 @@
-import { withStyles } from '@material-ui/core/styles';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
+import { withStyles } from '@mui/material/styles';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
 
 export const ToolsTableCell = withStyles((theme) => ({
   root: {

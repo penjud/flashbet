@@ -1,6 +1,6 @@
 import React from 'react';
-//* @material-ui core
-import { ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
+// @mui/material
+import { ListItem, ListItemText, ListItemIcon } from '@mui/material';
 //* JSS
 import useStyles from '../../../jss/components/Sidebar/menu/deselectSportStyle';
 

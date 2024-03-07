@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-//* @material-ui core
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
+// @mui/material
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 import { setItem } from '../../../localStorage/settings';
-//* Custom @material-ui components
+//* Custom @mui components
 import SectionBar from '../../../jss/components/Sidebar/SectionBar';
 import SectionContent from '../../../jss/components/Sidebar/SectionContent';
 

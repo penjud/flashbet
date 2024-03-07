@@ -1,5 +1,5 @@
-import MultiAccordionSummary from '@material-ui/core/AccordionSummary';
-import { withStyles } from '@material-ui/core/styles';
+import MultiAccordionSummary from '@mui/material/AccordionSummary';
+import { withStyles } from '@mui/material/styles';
 
 const SectionContent = withStyles((theme) => ({
   root: {

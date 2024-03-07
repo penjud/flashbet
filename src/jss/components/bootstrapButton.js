@@ -1,5 +1,5 @@
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import { withStyles } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 
 const BootstrapButton = withStyles({
   root: {

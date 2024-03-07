@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Cookies from 'universal-cookie';
-//* @material-ui core
-import Chip from '@material-ui/core/Chip';
-import Typography from '@material-ui/core/Typography';
+// @mui/material
+import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
 //* JSS
 import useStyles from '../../jss/components/HomeView/headerStyle';
 

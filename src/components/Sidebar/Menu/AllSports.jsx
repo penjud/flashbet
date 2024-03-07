@@ -2,8 +2,8 @@ import _ from 'lodash';
 import uuid from 'react-uuid';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import List from '@material-ui/core/List';
+// @mui/material
+import List from '@mui/material/List';
 //* Actions
 import { setAllSports, updateSubmenuList } from '../../../redux/actions/sport';
 import { sortSports } from '../../../utils/Sort';

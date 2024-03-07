@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import clsx from 'clsx';
 import crypto from 'crypto';
-//* @material-ui core
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+// @mui/material
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 //* Actions
 import { placeOrder } from '../../redux/actions/bet';
 import { updateOrderValue, updateOrderPrice } from '../../redux/actions/market';

@@ -1,8 +1,8 @@
 import { isEmpty } from 'lodash';
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import List from '@material-ui/core/List';
+// @mui/material
+import List from '@mui/material/List';
 //* Actions
 import { updateMyMarketsSubmenu } from '../../../redux/actions/sport';
 import DeselectSubmenu from './DeselectSubmenu';

@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import box from '../../box';
 
 const useStyles = makeStyles((theme) => ({

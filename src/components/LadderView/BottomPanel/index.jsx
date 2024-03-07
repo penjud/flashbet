@@ -1,8 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
 import { connect } from 'react-redux';
-//* @material-ui core
-import IconButton from '@material-ui/core/IconButton';
+// @mui/material
+import IconButton from '@mui/material/IconButton';
 //* Actions
 import { setLadderExpanded, setLadderBottom } from '../../../redux/actions/market';
 //* Components

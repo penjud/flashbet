@@ -1,8 +1,8 @@
 import React from 'react';
-//* @material-ui core
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
+// @mui/material
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 
 export default ({ plan, period, price, openPremiumDialog, classes }) => (
   <div className={classes.subscriptionContainer}>

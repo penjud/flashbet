@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Cookies from 'universal-cookie';
-//* @material-ui core
-import Box from '@material-ui/core/Box';
-import Chip from '@material-ui/core/Chip';
-import Typography from '@material-ui/core/Typography';
+// @mui/material
+import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
 //* Custom Components
 import SubscriptionContainer from './SubscriptionContainer';
 //* Actions

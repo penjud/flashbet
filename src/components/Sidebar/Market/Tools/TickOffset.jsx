@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import TextField from '@material-ui/core/TextField';
+// @mui/material
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import TextField from '@mui/material/TextField';
 //* JSS
 import useStyles from '../../../../jss/components/Sidebar/market/tools/tickOffsetStyle';
 //* Actions

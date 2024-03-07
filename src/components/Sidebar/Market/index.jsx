@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
+// @mui/material
 import clsx from 'clsx';
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
 //* Actions
 import { removeAllBackBets } from '../../../redux/actions/back';
 import { removeAllLayBets } from '../../../redux/actions/lay';
@@ -29,7 +29,6 @@ import updateCustomOrder from '../../../http/updateCustomOrder';
 import { cancelMarketBets } from '../../../http/placeBets';
 //* JSS
 import useStyles from '../../../jss/components/Sidebar/market';
-//* Custom @material-ui components
 import SectionBar from '../../../jss/components/Sidebar/SectionBar';
 import SectionContent from '../../../jss/components/Sidebar/SectionContent';
 

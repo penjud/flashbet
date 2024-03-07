@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { ListItem, ListItemText } from '@material-ui/core';
+import { ListItem, ListItemText } from '@mui/material';
 import MarketSaveButton from './MarketSaveButton';
 //* JSS
 import useStyles from '../../../jss/components/Sidebar/menu/submenuStyle';

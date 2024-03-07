@@ -1,21 +1,20 @@
-/* eslint-disable class-methods-use-this */
-const express = require('express');
-const path = require('path');
-const http = require('http');
-const SocketIO = require('socket.io');
-const SseStream = require('ssestream').default;
+import express from 'express';
+import path from 'path';
+import http from 'http';
+import { Server as SocketIO } from 'socket.io';
+import SseStream from 'ssestream';
+import cookieParser from 'cookie-parser';
 
-const BetFairSession = require('./betfair/session.js');
-
-const betfair = new BetFairSession(process.env.APP_KEY);
-
-const { isAuthURL } = require('./utils/Validator');
+import BetFairSession from './betfair/session.js';
+import { isAuthURL } from './utils/validator.js';
 
 class App {
   constructor({ port, controllers, middleWares }) {
     this.port = port;
     this.app = express();
     this.server = http.createServer(this.app);
+    this.sseStream = null;
+    this.betfair = new BetFairSession();
 
     if (process.env.NODE_ENV === 'production') {
       const bundlePath = path.join(__dirname, '../build/index.html');
@@ -26,23 +25,23 @@ class App {
       this.app.get('/logout', (req, res) => res.sendFile(bundlePath));
 
       this.app.get('/sse', (req, res) => {
-      
         this.sseStream = new SseStream(req);
         this.sseStream.pipe(res);
-      
+
         res.on('close', () => {
           this.sseStream.unpipe(res);
-        })
-      })
+        });
+      });
     }
 
     this.applyMiddlewares(middleWares);
+    this.app.use(cookieParser());
     this.applyAuthMiddleware();
 
     this.initRoutes(controllers);
 
-    this.io = SocketIO(this.server);
-    this.io.on('connection', this.onClientConnected);
+    this.io = new SocketIO(this.server);
+    this.io.on('connection', this.onClientConnected.bind(this));
 
     return this;
   }
@@ -55,29 +54,30 @@ class App {
 
   applyAuthMiddleware() {
     this.app.use('/', async (req, res, next) => {
-      if (!betfair.email && req.cookies.username) {
-        betfair.setEmailAddress(req.cookies.username);
+      if (!this.betfair.email && req.cookies.username) {
+        this.betfair.setEmailAddress(req.cookies.username);
       }
-    
-      if (!req.cookies.username && !isAuthURL(req.url)) {
+
+      if (!req.cookies.username && !validator.isAuthURL(req.url)) {
         return res.status(401).json({
           error: 'NO_SESSION',
         });
       }
-    
-      if (!betfair.sessionKey && req.cookies.sessionKey) {
-        betfair.setSession(req.cookies.sessionKey);
+
+      if (!this.betfair.sessionKey && req.cookies.sessionKey) {
+        this.betfair.setSession(req.cookies.sessionKey);
       }
-    
-      if (!req.cookies.sessionKey && !isAuthURL(req.url)) {
+
+      if (!req.cookies.sessionKey && !validator.isAuthURL(req.url)) {
         return res.status(401).json({
           error: 'NO_SESSION',
         });
       }
-      req.betfair = betfair;
+
+      req.betfair = this.betfair;
       req.sseStream = this.sseStream;
       return next();
-    }).bind(this);
+    });
   }
 
   initRoutes(controllers) {
@@ -92,17 +92,17 @@ class App {
 
   async onClientConnected(client) {
     console.log('new socket connection', client.id);
-    
-    const exchangeStream = betfair.createExchangeStream(client, betfair.sessionKey);
+
+    const exchangeStream = this.betfair.createExchangeStream(client, this.betfair.sessionKey);
 
     client.on('market-subscription', async ({ marketId }) => {
-      console.log(`Subscribing to market ${marketId}, Session: ${betfair.sessionKey}`);
-      exchangeStream.makeMarketSubscription(betfair.sessionKey, marketId);
+      console.log(`Subscribing to market ${marketId}, Session: ${this.betfair.sessionKey}`);
+      exchangeStream.makeMarketSubscription(this.betfair.sessionKey, marketId);
     });
 
     client.on('market-resubscription', async ({ initialClk, clk, marketId }) => {
-      console.log(`Resubscribing to market ${marketId}, Session: ${betfair.sessionKey}`);
-      exchangeStream.makeMarketSubscription(betfair.sessionKey, marketId, initialClk, clk);
+      console.log(`Resubscribing to market ${marketId}, Session: ${this.betfair.sessionKey}`);
+      exchangeStream.makeMarketSubscription(this.betfair.sessionKey, marketId, initialClk, clk);
     });
 
     client.on('disconnect', () => {
@@ -110,6 +110,6 @@ class App {
       console.log('socket disconnected', client.id);
     });
   }
-};
+}
 
-module.exports = App;
+export default App;

@@ -1,5 +1,5 @@
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { updateSubmenuList, updateMyMarketsSubmenu } from '../../../redux/actions/sport';

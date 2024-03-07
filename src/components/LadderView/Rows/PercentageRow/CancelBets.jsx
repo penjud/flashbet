@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 
 export default ({ cancelBetsOnSide, side, layFirstCol }) => {
   const [text, setText] = useState('');

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-//* @material-ui core
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import { ListItemText, Divider } from '@material-ui/core';
+/ @mui/material
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import { ListItemText, Divider } from '@mui/material';
 //* JSS
 import useStyles from '../../../jss/components/Sidebar/menu/menuStyle';
 //* HTTP

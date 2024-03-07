@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
+// @mui/material
+import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
 import CountDown from './Countdown';
 //* Utils
 import formatEventName from '../../utils/Market/FormatEventName';

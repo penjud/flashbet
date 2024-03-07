@@ -2,16 +2,16 @@ import _ from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import crypto from 'crypto';
-//* @material-ui core
-import Button from '@material-ui/core/Button';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import OutlinedInput from '@material-ui/core/OutlinedInput';
-import Select from '@material-ui/core/Select';
-import TextField from '@material-ui/core/TextField';
+// @mui/material
+import Button from '@mui/material/Button';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Select from '@mui/material/Select';
+import TextField from '@mui/material/TextField';
 //* Actions
 import { setLTPOperator, setTargetLTP, setStake, setPrice, updateStopEntryList, setSelections } from '../../../../redux/actions/stopEntry';
 //* Utils

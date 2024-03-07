@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import textFieldStyle from '../../../../textFieldStyle';
 import radioButtonStyle from '../../../../radioButtonStyle';
 import checkboxStyle from '../../../../checkboxStyle';

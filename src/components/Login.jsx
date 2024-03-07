@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import Cookies from 'universal-cookie';
 import { Redirect } from 'react-router-dom';
-//* @material-ui core
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Link from '@material-ui/core/Link';
-import TextField from '@material-ui/core/TextField';
-import Typography from '@material-ui/core/Typography';
+//* @mui core
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import Link from '@mui/material/Link';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 //* Utils
 import errorList from '../utils/Errors/AuthErrors';
 import getQueryVariable from '../utils/Market/GetQueryVariable';

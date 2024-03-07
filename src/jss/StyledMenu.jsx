@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import Menu from '@material-ui/core/Menu';
+import { withStyles } from '@mui/material/styles';
+import Menu from '@mui/material/Menu';
 
 export default withStyles({
   paper: {

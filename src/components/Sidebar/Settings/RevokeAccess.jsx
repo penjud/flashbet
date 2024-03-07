@@ -1,6 +1,6 @@
 import React from 'react';
 import Cookies from 'universal-cookie';
-//* @material-ui core
+//* @mui/material core
 import useStyles from '../../../jss/components/Sidebar/settings/revokeAccessStyle';
 //* HTTP
 import fetchData from '../../../http/fetchData';

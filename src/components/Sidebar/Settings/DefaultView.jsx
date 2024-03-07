@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-//* @material-ui core
-import AppBar from '@material-ui/core/AppBar';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import Typography from '@material-ui/core/Typography';
+// @mui/material
+import AppBar from '@mui/material/AppBar';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import Typography from '@mui/material/Typography';
 import { setItem } from '../../../localStorage/settings';
-//* Custom @material-ui components
+//* Custom @mui components
 import SectionBar from '../../../jss/components/Sidebar/SectionBar';
 import SectionContent from '../../../jss/components/Sidebar/SectionContent';
 

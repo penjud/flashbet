@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import dropdownRunnerStyle from '../../../../DropdownList';
 import textFieldStyle from '../../../../textFieldStyle';
 import radioButtonStyle from '../../../../radioButtonStyle';

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import { connect } from 'react-redux';
-import Popover from '@material-ui/core/Popover';
-import { Button, Typography } from '@material-ui/core';
+import Popover from '@mui/material/Popover';
+import { Button, Typography } from '@mui/material';
 //* Actions
 import { setActiveView, setFullscreen, openPremiumDialog } from '../../redux/actions/settings';
 import { openLiveStream } from '../../redux/actions/draggable';

@@ -4,8 +4,8 @@ import uuid from 'react-uuid';
 import moment from 'moment';
 import crypto from 'crypto';
 import clsx from 'clsx';
-//* @material-ui core
-import Button from '@material-ui/core/Button';
+// @mui/material
+import Button from '@mui/material/Button';
 //* Actions
 import { placeOrder } from '../../redux/actions/bet';
 import { setStakeInOneClick } from '../../redux/actions/settings';

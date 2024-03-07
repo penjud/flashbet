@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-//* @material-ui core
-import { List, ListItem, ListItemText } from '@material-ui/core';
+// @mui/material
+import { List, ListItem, ListItemText } from '@mui/material';
 //* Components
 import Chart from './Chart';
 //* JSS

@@ -1,5 +1,5 @@
-import MultiAccordion from '@material-ui/core/Accordion';
-import { withStyles } from '@material-ui/core/styles';
+import MultiAccordion from '@mui/material/Accordion';
+import { withStyles } from '@mui/material/styles';
 
 const SectionBar = withStyles({
   root: {

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
+// @mui/material
 import clsx from 'clsx';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import TextField from '@material-ui/core/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import TextField from '@mui/material/TextField';
 //* Actions
 import { setDisplayText, setStopLossOffset, setStopLossUnit, toggleStopLossTrailing, toggleStopLossHedged, setSelections } from '../../../../redux/actions/stopLoss';
 //* JSS

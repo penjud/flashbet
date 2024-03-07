@@ -1,17 +1,18 @@
 import React, { useEffect, forwardRef } from 'react';
 import { connect } from 'react-redux';
-//* @material-ui core
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import IconButton from '@material-ui/core/IconButton';
-import Slide from '@material-ui/core/Slide';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-//* @material-ui icons
-import CloseIcon from '@material-ui/icons/Close';
+// @mui/material
+import AppBar from '@mui/material/AppBar';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import IconButton from '@mui/material/IconButton';
+import Slide from '@mui/material/Slide';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+
+// @mui/icons-material
+import CloseIcon from '@mui/icons-material/Close';
 //* Actions
 import { openPremiumDialog } from '../redux/actions/settings';
 //* JSS

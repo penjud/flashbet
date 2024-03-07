@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { connect } from 'react-redux';
 import { createChart } from 'lightweight-charts';
-//* @material-ui core
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
+// @mui/material
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
 //* JSS
 import useStyles from '../../../jss/components/HomeView/chartStyle';
 //* Utils
